@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package user.v1;
+
+service UserService {
+  rpc CreateUser (CreateUserRequest) returns (User);
+  rpc GetUserByEmail (GetUserByEmailRequest) returns (User);
+  rpc ValidateCredentials (ValidateCredentialsRequest) returns (ValidateCredentialsResponse);
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message GetUserByEmailRequest {
+  string email = 1;
+}
+
+message ValidateCredentialsRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message User {
+  string id = 1;
+  string email = 2;
+  string created_at = 3;
+}
+
+message ValidateCredentialsResponse {
+  bool valid = 1;
+  User user = 2;
+}

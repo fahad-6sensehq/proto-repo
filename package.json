@@ -1,13 +1,21 @@
 {
   "name": "@contracts/proto",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "description": "Shared gRPC contracts for local services",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
       "types": "./index.d.ts",
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
       "default": "./index.js"
     }
   },
@@ -15,5 +23,11 @@
     "index.js",
     "index.d.ts",
     "proto"
-  ]
+  ],
+  "peerDependencies": {
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "rxjs": "^7.8.2"
+  }
 }
