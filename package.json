@@ -3,6 +3,11 @@
   "version": "0.1.2",
   "private": true,
   "description": "Shared gRPC contracts for local services",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fahad-6sensehq/proto-repo.git"
+  },
+  "license": "MIT",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
