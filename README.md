@@ -14,29 +14,14 @@ Repo: [github.com/fahad-6sensehq/proto-repo](https://github.com/fahad-6sensehq/p
 
 TypeScript types and proto paths are exported from `index.js` / `index.d.ts`.
 
-## Use as a git submodule
+## Install
 
 ```bash
-git submodule add https://github.com/fahad-6sensehq/proto-repo.git proto
-git submodule update --init --recursive
-```
-
-```json
-{
-  "dependencies": {
-    "@contracts/proto": "file:./proto"
-  }
-}
+pnpm add @contracts/proto@github:fahad-6sensehq/proto-repo
 ```
 
 ```ts
 import { USER_PACKAGE, USER_PROTO_PATH, USER_SERVICE_NAME } from '@contracts/proto';
-```
-
-## Use as a git dependency
-
-```bash
-pnpm add github:fahad-6sensehq/proto-repo
 ```
 
 Nest gRPC server/client options should use the exported `*_PACKAGE` and `*_PROTO_PATH` constants so every service loads the same `.proto` files.
